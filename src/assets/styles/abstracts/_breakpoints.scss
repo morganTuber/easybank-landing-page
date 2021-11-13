@@ -1,0 +1,25 @@
+// Responsive media query mixin
+$bps: (
+    'phone-sm': 20em /* 320px; dinosaurs */,
+    'phone-md': 23.4em /* 374; Iphone 6 -> X */,
+    'phone-lg': 25.625em /* 410px; Pixel2 */,
+    'tab': 37.5em /* 600x; Ipad */,
+    'tab-lg': 56.25em /* 900px; Ipad Pro:1024px */,
+    'desktop': 75em /* 1200px */,
+    'desktop-md': 85.375em /* 1366px; 1366×768 (8.44%) */,
+    'desktop-lg': 112.5em /* 1800px; 1920×1080 (8.89%) */,
+    'desktop-xlg': 137.5em /* 2200px, 4K 24"+ */,
+);
+
+@mixin responsive($breakpoint) {
+    $bp: map-get(
+        $map: $bps,
+        $key: $breakpoint,
+    );
+    @if $bp == null {
+        @warn "Breakpoint $breakpoint is not defined in $bps";
+    }
+    @media only screen and (max-width: $bp) {
+        @content;
+    }
+}

@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.heading-primary {
+    font-size: 5.2rem;
+    font-weight: 700;
+    letter-spacing: -0.75px;
+}
+.heading-secondary {
+    font-size: 3.6rem;
+    font-weight: 600;
+}
+.heading-tertiary {
+    font-size: 2.4rem;
+    font-weight: 600;
+}

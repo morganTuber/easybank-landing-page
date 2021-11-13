@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+.icon {
+    pointer-events: none;
+}
+
+.text {
+    font-size: var(--font-size, 1.8rem);
+    line-height: 1.8;
+    color: $grayish-blue;
+}
+.sub-title {
+    font-size: 1.6rem;
+    color: $grayish-blue;
+}
+//margins utils
+.mb-sm {
+    margin-bottom: 1.2rem;
+}
+.mb-md {
+    margin-bottom: 2.4rem;
+}
+.mb-lg {
+    margin-bottom: 3.2rem;
+}
+.ml-sm {
+    margin-left: 1.2rem;
+}
+//tag
+.tag {
+    display: inline-block;
+    padding: 8px 1.6rem;
+    background-color: $lime-green;
+    border-radius: $border-radius-default;
+    font-weight: $font-semibold;
+}

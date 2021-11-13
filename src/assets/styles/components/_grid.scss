@@ -1,0 +1,9 @@
+.grid {
+    display: grid;
+
+    @for $var from 1 to 6 {
+        &.grid--cols-#{$var} {
+            grid-template-columns: repeat(#{$var}, 1fr);
+        }
+    }
+}
